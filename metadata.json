@@ -1,0 +1,6 @@
+{
+  "name": "O Gato Laranja e o Pântano Morse",
+  "description": "Jogo narrativo de escolhas e código Morse onde um gato alaranjado atravessa o pântano até a casa do sapo de óculos para comer mingau.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

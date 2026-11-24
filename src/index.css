@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    background-color: #111b17;
+    color: #f4efe6;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: #111b17;
+    color: #f4efe6;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+@keyframes cameraFloat {
+  0%, 100% {
+    transform: scale(1.06) translate3d(0px, 0px, 0);
+  }
+  25% {
+    transform: scale(1.08) translate3d(-6px, -3px, 0);
+  }
+  50% {
+    transform: scale(1.07) translate3d(5px, -5px, 0);
+  }
+  75% {
+    transform: scale(1.085) translate3d(4px, 3px, 0);
+  }
+}
+
+@keyframes cartoonBounce {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.025, 0.985);
+  }
+  70% {
+    transform: scale(0.992, 1.012);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fireflyFlightA {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) scale(0.85);
+    opacity: 0.35;
+  }
+  25% {
+    transform: translate3d(18px, -16px, 0) scale(1.2);
+    opacity: 0.95;
+  }
+  55% {
+    transform: translate3d(32px, -4px, 0) scale(0.95);
+    opacity: 0.65;
+  }
+  80% {
+    transform: translate3d(12px, 10px, 0) scale(1.15);
+    opacity: 0.9;
+  }
+}
+
+@keyframes fireflyFlightB {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translate3d(-20px, -14px, 0) scale(1.25);
+    opacity: 1;
+  }
+  65% {
+    transform: translate3d(-10px, 12px, 0) scale(0.85);
+    opacity: 0.5;
+  }
+}
+
+@keyframes mistDrift {
+  0%, 100% {
+    transform: translate3d(-4%, 0px, 0) scaleX(1.04);
+    opacity: 0.32;
+  }
+  50% {
+    transform: translate3d(5%, -4px, 0) scaleX(1.08);
+    opacity: 0.56;
+  }
+}
+
+@keyframes mistDriftReverse {
+  0%, 100% {
+    transform: translate3d(5%, 0px, 0);
+    opacity: 0.28;
+  }
+  50% {
+    transform: translate3d(-5%, 4px, 0);
+    opacity: 0.5;
+  }
+}
+
+@keyframes lanternPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.12);
+    opacity: 0.78;
+  }
+}
+
+@keyframes waterRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.9);
+    opacity: 0;
+  }
+}
+
+@keyframes riseSteam {
+  0% {
+    transform: translate3d(0, 6px, 0) scaleX(0.9) scaleY(0.85);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.75;
+  }
+  70% {
+    transform: translate3d(6px, -18px, 0) scaleX(1.12) scaleY(1.1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate3d(-3px, -36px, 0) scaleX(1.25) scaleY(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes emberRise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate3d(10px, -42px, 0) scale(0.35);
+    opacity: 0;
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.95;
+  }
+}
+
+@keyframes clickBurst {
+  0% {
+    transform: translate(-50%, -50%) scale(0.35);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.4);
+    opacity: 0;
+  }
+}
+
+.animate-camera-float {
+  animation: cameraFloat 14s ease-in-out infinite;
+}
+
+.animate-cartoon-pop {
+  animation: cartoonBounce 380ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-firefly-a {
+  animation: fireflyFlightA 6.5s ease-in-out infinite;
+}
+
+.animate-firefly-b {
+  animation: fireflyFlightB 7.8s ease-in-out infinite;
+}
+
+.animate-mist-drift {
+  animation: mistDrift 10s ease-in-out infinite;
+}
+
+.animate-mist-reverse {
+  animation: mistDriftReverse 12s ease-in-out infinite;
+}
+
+.animate-lantern-pulse {
+  animation: lanternPulse 3.4s ease-in-out infinite;
+}
+
+.animate-water-ripple {
+  animation: waterRipple 4.4s ease-out infinite;
+}
+
+.animate-steam {
+  animation: riseSteam 3.4s ease-out infinite;
+}
+
+.animate-ember-rise {
+  animation: emberRise 2.8s ease-out infinite;
+}
+
+.animate-star-twinkle {
+  animation: starTwinkle 3.2s ease-in-out infinite;
+}
+
+.animate-click-burst {
+  animation: clickBurst 650ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
